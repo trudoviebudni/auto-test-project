@@ -34,7 +34,7 @@ supported_browsers = {
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default='chrome',
                      help="Choose browser: chrome or firefox")
-    parser.addoption('--language', action='store', default='ru',
+    parser.addoption('--language', action='store', default='en',
                      help="Choose language: for example: '--language=en' or '--language=ru'")
 
 
