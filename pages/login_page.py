@@ -5,8 +5,8 @@ from .locators import LoginPageLocators
 class LoginPage(BasePage):
     LOGIN_PAGE_URL = "https://selenium1py.pythonanywhere.com/ru/accounts/login/"
 
-    def __init__(self, browser):
-        super().__init__(browser, LoginPage.LOGIN_PAGE_URL)
+    def __init__(self, browser, url=LOGIN_PAGE_URL):
+        super().__init__(browser, url)
 
     def should_be_login_page(self):
         self.should_be_login_url()

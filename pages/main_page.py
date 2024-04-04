@@ -7,8 +7,8 @@ class MainPage(BasePage):
     MAIN_PAGE_URL = "http://selenium1py.pythonanywhere.com/"
 
     # передаем ссылку в конструктор BasePage
-    def __init__(self, browser):
-        super().__init__(browser, MainPage.MAIN_PAGE_URL)
+    def __init__(self, browser, url=MAIN_PAGE_URL):
+        super().__init__(browser, url)
 
     def go_to_login_page(self):
         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
