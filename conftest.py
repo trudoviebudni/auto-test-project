@@ -11,6 +11,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 # позволяет автоматически импортировать фикстуры из данного модуля в разные тесты
 def chrome_launch(request) -> Tuple[WebDriver, str]:
     options = OptionsChrome()
+    options.add_argument('--headless')
     selected_language = request.config.getoption("language")
     options.add_experimental_option('prefs', {'intl.accept_languages': selected_language})
     browser = webdriver.Chrome(options=options)
@@ -19,6 +20,7 @@ def chrome_launch(request) -> Tuple[WebDriver, str]:
 
 def firefox_launch(request) -> Tuple[WebDriver, str]:
     options = OptionsFirefox()
+    options.add_argument('--headless')
     selected_language = request.config.getoption("language")
     options.set_preference("intl.accept_languages", selected_language)
     browser = webdriver.Firefox(options=options)
