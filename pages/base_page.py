@@ -4,7 +4,6 @@ import time
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-from selenium.webdriver.common.by import By
 
 
 class BasePage:
