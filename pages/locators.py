@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     BASKET_LINK = (By.CSS_SELECTOR, "span a.btn[href='/en-gb/basket/']")
 
